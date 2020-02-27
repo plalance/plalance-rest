@@ -9,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -26,12 +27,19 @@ public class MainResource {
 
 	@Inject
 	ObjectMapper jsonMapper;
+	
+
+	@Value("${toto}")
+	private String test;
+	
 
 //	/** Logger */
 //	private static final Logger LOG = LoggerFactory.getLogger(MainResource.class);
 
 	@GET
 	public Response totoMain() throws Exception {
+		
+		System.out.println("TEST : " + test);
 		
 		AnimalDao animalDao = new AnimalDao();
 
