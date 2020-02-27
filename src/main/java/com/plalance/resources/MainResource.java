@@ -1,45 +1,36 @@
 package com.plalance.resources;
 
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.plalance.dao.AnimalDao;
 import com.plalance.services.MainService;
 
 @Path("/")
-@Consumes(MediaType.APPLICATION_JSON)
-@Produces(MediaType.APPLICATION_JSON)
-@Component
 public class MainResource {
 
 	@Inject
 	MainService mainService;
-
+	
 	@Inject
 	ObjectMapper jsonMapper;
 	
-
-	@Value("${toto}")
-	private String test;
+	@Autowired
+	private Environment env;
 	
-
 //	/** Logger */
 //	private static final Logger LOG = LoggerFactory.getLogger(MainResource.class);
 
 	@GET
+	@Path("/animaux")
 	public Response totoMain() throws Exception {
-		
-		System.out.println("TEST : " + test);
 		
 		AnimalDao animalDao = new AnimalDao();
 

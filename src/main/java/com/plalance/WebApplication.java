@@ -12,7 +12,6 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class WebApplication implements WebApplicationInitializer {
-	
 
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {

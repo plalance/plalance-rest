@@ -1,8 +1,8 @@
-C:\Users\plalance\JavaProjects\plalance-rest\src\main\java\com\plalance\resources\MainResource.java
-C:\Users\plalance\JavaProjects\plalance-rest\src\main\java\com\plalance\configuration\HibernateUtil.java
-C:\Users\plalance\JavaProjects\plalance-rest\src\main\java\com\plalance\dao\AnimalDao.java
-C:\Users\plalance\JavaProjects\plalance-rest\src\main\java\com\plalance\models\Animal.java
-C:\Users\plalance\JavaProjects\plalance-rest\src\main\java\com\plalance\services\MainService.java
-C:\Users\plalance\JavaProjects\plalance-rest\src\main\java\com\plalance\configuration\RestConfig.java
-C:\Users\plalance\JavaProjects\plalance-rest\src\main\java\com\plalance\configuration\SpringConfig.java
-C:\Users\plalance\JavaProjects\plalance-rest\src\main\java\com\plalance\WebApplication.java
+C:\WorkspaceJava\plalance-rest\src\main\java\com\plalance\models\Animal.java
+C:\WorkspaceJava\plalance-rest\src\main\java\com\plalance\resources\MainResource.java
+C:\WorkspaceJava\plalance-rest\src\main\java\com\plalance\configuration\RestConfig.java
+C:\WorkspaceJava\plalance-rest\src\main\java\com\plalance\configuration\SpringConfig.java
+C:\WorkspaceJava\plalance-rest\src\main\java\com\plalance\services\MainService.java
+C:\WorkspaceJava\plalance-rest\src\main\java\com\plalance\dao\AnimalDao.java
+C:\WorkspaceJava\plalance-rest\src\main\java\com\plalance\configuration\HibernateUtil.java
+C:\WorkspaceJava\plalance-rest\src\main\java\com\plalance\WebApplication.java

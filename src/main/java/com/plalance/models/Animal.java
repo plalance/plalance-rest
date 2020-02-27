@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table( name = "animaux")
+@Table( name = "chats")
 public class Animal {
 	
 	@Id
@@ -21,7 +21,7 @@ public class Animal {
 	@Column( name = "NOM")
 	private String nom;
 	
-	@Column( name = "TYPE")
+	@Column( name = "RACE")
 	private String type;
 
 	public Animal() {
