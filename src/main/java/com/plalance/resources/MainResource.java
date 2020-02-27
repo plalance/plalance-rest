@@ -11,6 +11,7 @@ import org.springframework.core.env.Environment;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.plalance.dao.AnimalDao;
+import com.plalance.models.Animal;
 import com.plalance.services.MainService;
 
 @Path("/")
@@ -34,6 +35,12 @@ public class MainResource {
 		
 		AnimalDao animalDao = new AnimalDao();
 
+		Animal chat = new Animal();
+		chat.setNom("POTTÉ");
+		chat.setType("CHAT NINJA");
+		
+		animalDao.save(chat);
+		
 		String resp = jsonMapper.writeValueAsString(animalDao.list());
 		
 		return Response.status(Status.OK).entity(resp).build();
