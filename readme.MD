@@ -10,6 +10,10 @@ Pour lancer un Tomcat Embarqué :
 
 https://dzone.com/articles/hibernate-5-java-configuration-example
 
+## A venir : Generic DAO
+
+https://stackoverflow.com/questions/9721383/hibernate-crud-generic-dao
+
 ## Si War non déployé sur tomcat / Tomcat ne voit rien 
 
 right click -> properties -> Deployment Assembly
