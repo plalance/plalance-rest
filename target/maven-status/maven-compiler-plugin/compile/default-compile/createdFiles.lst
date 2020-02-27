@@ -1,0 +1,8 @@
+com\plalance\configuration\SpringConfig.class
+com\plalance\dao\AnimalDao.class
+com\plalance\services\MainService.class
+com\plalance\models\Animal.class
+com\plalance\configuration\RestConfig.class
+com\plalance\WebApplication.class
+com\plalance\configuration\HibernateUtil.class
+com\plalance\resources\MainResource.class

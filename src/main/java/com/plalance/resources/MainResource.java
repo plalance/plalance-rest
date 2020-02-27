@@ -9,14 +9,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.cerprrm.mg2.service.impl.ProposalServiceImpl;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.plalance.dao.AnimalDao;
 import com.plalance.services.MainService;
 
 @Path("/")
@@ -31,16 +27,17 @@ public class MainResource {
 	@Inject
 	ObjectMapper jsonMapper;
 
-	/** Logger */
-	private static final Logger LOG = LoggerFactory.getLogger(MainResource.class);
+//	/** Logger */
+//	private static final Logger LOG = LoggerFactory.getLogger(MainResource.class);
 
 	@GET
-	@Path("/x")
 	public Response totoMain() throws Exception {
+		
+		AnimalDao animalDao = new AnimalDao();
 
-		LOG.info(jsonMapper.writeValueAsString((5)));
-
-		return Response.status(Status.OK).entity(mainService.listAll().toString()).build();
+		String resp = jsonMapper.writeValueAsString(animalDao.list());
+		
+		return Response.status(Status.OK).entity(resp).build();
 
 	}
 }

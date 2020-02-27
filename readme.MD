@@ -5,6 +5,10 @@ https://blog.engineering.publicissapient.fr/2014/04/22/construire-une-api-rest-a
 Pour lancer un Tomcat Embarqué :
 	
 	mvn tomcat7:run
+	
+## Hibernate Java Based Configuration
+
+https://dzone.com/articles/hibernate-5-java-configuration-example
 
 ## Si War non déployé sur tomcat / Tomcat ne voit rien 
 
