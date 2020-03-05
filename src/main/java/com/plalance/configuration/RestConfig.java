@@ -12,7 +12,7 @@ public class RestConfig extends ResourceConfig {
 	 */
 	public RestConfig()
 	{
-		packages("com.plalance");
+		packages("com.plalance.resources");
 	}
 	
 }
