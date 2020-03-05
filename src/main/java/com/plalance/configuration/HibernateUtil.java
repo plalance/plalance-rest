@@ -7,11 +7,11 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.plalance.models.Animal;
+import com.plalance.models.Personne;
 
 @Component
 public class HibernateUtil {
@@ -87,7 +87,9 @@ public class HibernateUtil {
 
 				configuration.setProperties(settings);
 
+				// IMPORTANT
 				configuration.addAnnotatedClass(Animal.class);
+				configuration.addAnnotatedClass(Personne.class);
 
 				ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 						.applySettings(configuration.getProperties()).build();
