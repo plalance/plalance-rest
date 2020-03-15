@@ -1,14 +1,12 @@
 # Stack
 
+- Maven Project
+- Java 13 (https://jdk.java.net/13/)
 - Spring Web : 5.2.3
 - Hibernate = JPA Reference Implementation : 5.4.1
 - Jersey = JAX-RS (JSR 311 & JSR 339) Reference Implementation : 2.30.1
 
-## Commandes
-
-Pour lancer un Tomcat embarqué :
-	
-	mvn tomcat7:run
+Fonctionnel sur tomcat 9.0.12.
 	
 ## Hibernate Cassandra
 

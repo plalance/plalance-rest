@@ -1,5 +1,6 @@
 package com.plalance;
 
+import java.util.logging.Logger;
 
 import javax.inject.Inject;
 
@@ -13,9 +14,11 @@ import com.plalance.stack.ApplicationRunner;
  * Application runner for developement test.
  */
 @Component
+@SuppressWarnings("preview")
 public class AppTest extends ApplicationRunner {
 
-	
+	private Logger LOG = Logger.getLogger(AppTest.class.getName());
+
 	@Inject
 	ObjectMapper jsonMapper;
 
@@ -26,25 +29,23 @@ public class AppTest extends ApplicationRunner {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		
+
 		initialize(AppTest.class, args);
 	}
 
-	/**
-	 * Do run things
-	 *
-	 * @throws Exception
-	 */
 	@Override
-	public void run() {
-		
+	public void run() throws Exception {
+
+		String myBlock = """
+				line 1
+				line 2
+				line 3
+				""";
+
+		LOG.info(myBlock);
+
 		Integer toto = 15;
 		
-		try {
-			System.out.println(jsonMapper.writeValueAsString(toto));
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
-		}
-
+		LOG.info(jsonMapper.writeValueAsString(toto));
 	}
 }

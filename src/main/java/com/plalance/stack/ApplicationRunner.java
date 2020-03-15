@@ -71,9 +71,10 @@ public abstract class ApplicationRunner
 
 	/**
 	 * Run
+	 * @throws Exception 
 	 *
 	 * @throws TechnicalException
 	 */
-	public abstract void run();
+	public abstract void run() throws Exception;
 
 }

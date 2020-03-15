@@ -151,7 +151,7 @@
 		<pluginManagement>
 			<plugins>
 
-				<!-- Pour tester : Tomcat 7 embarqué -->
+				<!-- Pour tester : Tomcat 7 embarqué si projet configuré pour Java 8 -->
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
@@ -169,6 +169,8 @@
 					<configuration>
 						<source>13</source> <!-- 1.8,1.9,1.10,11,12,13 -->
 						<target>13</target>
+						<release>13</release> <!-- <release>13</release> -->
+						<compilerArgs>--enable-preview</compilerArgs>
 					</configuration>
 				</plugin>
 
