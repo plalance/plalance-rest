@@ -10,7 +10,12 @@ Pour lancer un Tomcat embarqué :
 	
 	mvn tomcat7:run
 	
+## Hibernate Cassandra
 
+https://docs.jboss.org/hibernate/stable/ogm/reference/en-US/html_single/#preface
+
+	
+	
 ### Sources & Documentation
 
 - https://dzone.com/articles/hibernate-5-java-configuration-example
@@ -21,3 +26,5 @@ Pour lancer un Tomcat embarqué :
 - Jersey 2.30.1 User Guide : https://eclipse-ee4j.github.io/jersey.github.io/documentation/latest/index.html
 
 - https://www.cwiki.us/display/JERSEYEN/Consuming+SSE+events+within+Jersey+clients
+
+- Hibernate Cassandra : https://docs.jboss.org/hibernate/ogm/5.0/reference/en-US/html/ch14.html#configuring_cassandra

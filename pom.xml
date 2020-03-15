@@ -14,19 +14,23 @@
 
 		<commons.io.version>2.4</commons.io.version>
 		<commons.net.version>2.0</commons.net.version>
+
 		<hibernate.version>5.4.1.Final</hibernate.version>
+		<hibernate.cassandra.version>5.1.0.Final</hibernate.cassandra.version>
 
 		<servlet.version>3.1.0</servlet.version>
 
 		<jersey.version>2.30.1</jersey.version>
 		<jersey.spring5.version>2.30.1</jersey.spring5.version>
 		<jersey.sse.version>2.30.1</jersey.sse.version>
-		
+
 		<spring.version>5.2.3.RELEASE</spring.version>
 
 		<jackson.version>2.1.4</jackson.version>
 		<slf4j.version>1.7.30</slf4j.version>
 		<logback.version>1.2.3</logback.version>
+
+
 	</properties>
 
 	<dependencyManagement>
@@ -46,6 +50,15 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.hibernate.ogm/hibernate-ogm-bom -->
+			<dependency>
+				<groupId>org.hibernate.ogm</groupId>
+				<artifactId>hibernate-ogm-bom</artifactId>
+				<version>5.1.0.Final</version>
+				<type>pom</type>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -95,6 +108,20 @@
 			<version>8.0.13</version>
 		</dependency>
 
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>${commons.net.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons.io.version}</version>
+		</dependency>
+
+		<!-- HIBERNATE & DB CONNECTORS -->
+
 		<!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -108,16 +135,11 @@
 			<version>${hibernate.version}</version>
 		</dependency>
 
+		<!-- Cassandra -->
 		<dependency>
-			<groupId>commons-net</groupId>
-			<artifactId>commons-net</artifactId>
-			<version>${commons.net.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>${commons.io.version}</version>
+			<groupId>org.hibernate.ogm</groupId>
+			<artifactId>hibernate-ogm-cassandra</artifactId>
+			<version>${hibernate.cassandra.version}</version>
 		</dependency>
 
 	</dependencies>
@@ -136,6 +158,7 @@
 					<version>2.0</version>
 					<configuration>
 						<path>/</path>
+						<port>8000</port>
 					</configuration>
 				</plugin>
 
