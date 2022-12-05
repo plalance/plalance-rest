@@ -13,7 +13,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<commons.io.version>2.4</commons.io.version>
-		<commons.net.version>2.0</commons.net.version>
+		<commons.net.version>3.9.0</commons.net.version>
 
 		<hibernate.version>5.4.1.Final</hibernate.version>
 		<hibernate.cassandra.version>5.1.0.Final</hibernate.cassandra.version>
